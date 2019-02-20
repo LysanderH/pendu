@@ -1,7 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Lysan
- * Date: 20.02.2019
- * Time: 11:26
- */
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    include 'getController.php';
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    include 'postController.php';
+} else {
+    die('Vous n’avez rien a faire ici');
+}
+
+$serializedLettersArray = urlencode(serialize($lettersArray));
