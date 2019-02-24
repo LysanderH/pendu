@@ -30,3 +30,6 @@ $lettersArray = [
 
 $wordsArray = getWordsArray();
 $word = getWord(getRandomIndex($wordsArray), $wordsArray);
+
+$wordLength = strlen($word) - 1;
+$hiddenWord = str_repeat('*', $wordLength);
