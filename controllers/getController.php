@@ -27,3 +27,6 @@ $lettersArray = [
     'y' => true,
     'z' => true
 ];
+
+$wordsArray = getWordsArray();
+$word = getWord(getRandomIndex($wordsArray), $wordsArray);

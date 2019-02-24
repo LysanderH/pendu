@@ -2,9 +2,8 @@
 
 
 include 'configs/config.php';
-$wordsArray = file(FILE_PATH);
-var_dump($wordsArray);
-
-
+include 'models/model.php';
 include 'controllers/controller.php';
 include 'views/layout.html';
+
+//TODO: REmplacer le X compte lettres + remplacer par des étoiles
