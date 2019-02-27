@@ -1,5 +1,5 @@
 <div>
     <p>
-        Bravo&nbsp;! Tu as trouvé le mot&nbsp;! C’était «&nbsp;<b>X</b>&nbsp;» <a href="X">Recommence&nbsp;!</a>
+        Bravo&nbsp;! Tu as trouvé le mot&nbsp;! C’était «&nbsp;<b><?= $word; ?></b>&nbsp;» <a href="<?= $_SERVER['PHP_SELF']; ?>">Recommence&nbsp;!</a>
     </p>
 </div>

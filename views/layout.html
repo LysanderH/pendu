@@ -7,13 +7,13 @@
 </head>
 <body>
 <div>
-    <h1><?= GAME_TITLE; ?> : Trouve le mot en moin de <?= MAX_TRIALS ?> coups</h1>
+    <h1><?= GAME_TITLE; ?> : Trouve le mot en moin de <?= $remainingTrials ?> coups</h1>
 </div>
 <div>
-    <p>Le mot a deviner compte <?= $lettersCount; ?> lettres :<?=$word;?> <?= $replacementString; ?></p>
+    <p>Le mot a deviner compte <?= $lettersCount; ?> lettres : <?= $replacementString; ?></p>
 </div>
 <div>
-    <img srcset="images/pendu<?= $trial; ?>.gif" alt="X">
+    <img srcset="images/pendu<?= $trials; ?>.gif" alt="X">
 </div>
 <div>
     <p>
@@ -24,7 +24,16 @@
     <!-- Si on joue insérer le formulaire -->
     <!-- Si on a perdu insérer le message de défaite -->
     <!-- Si on a gagné insérer le message de victoire -->
-    <?php include 'partials/form.php'?>
+    <?php if($gameOver === true) {
+        include 'partials/failure.php';
+    }
+    if($gameWon === true){
+        include 'partials/success.php';
+    }
+    if($gamePlaying === true){
+        include 'partials/form.php';
+    }
+    ?>
 </div>
 </body>
 </html>

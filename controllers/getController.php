@@ -1,4 +1,7 @@
 <?php
+$gameOver = false;
+$gameWon = false;
+$gamePlaying = true;
 $lettersArray = [
     'a' => true,
     'b' => true,
@@ -28,13 +31,11 @@ $lettersArray = [
     'z' => true
 ];
 
-$wordsArray = getWordsArray();
-$word = getWord(getRandomIndex($wordsArray), $wordsArray);
-
-$lettersCount = strlen($word);
+$wordsArray        = getWordsArray();
+$wordIndex         = getRandomIndex($wordsArray);
+$word              = strtolower(getWord($wordIndex, $wordsArray));
+$lettersCount      = strlen($word);
 $replacementString = getReplacementString($word, $lettersCount);
-
-$remainingTrials = MAX_TRIALS;
-$trial = 0;
-
-$triedLetters = '';
+$remainingTrials   = MAX_TRIALS;
+$trials             = 0;
+$triedLetters      = '';
