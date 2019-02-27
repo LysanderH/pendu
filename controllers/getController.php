@@ -1,4 +1,7 @@
 <?php
+if (isset($_COOKIE['pendu'])){
+
+}
 $gameOver = false;
 $gameWon = false;
 $gamePlaying = true;
