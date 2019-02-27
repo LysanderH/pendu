@@ -10,10 +10,15 @@
     <h1><?= GAME_TITLE; ?> : Trouve le mot en moin de <?= MAX_TRIALS ?> coups</h1>
 </div>
 <div>
-    <p>Le mot a deviner compte <?= $wordLength; ?> lettres : <?= $hiddenWord; ?></p>
+    <p>Le mot a deviner compte <?= $lettersCount; ?> lettres :<?=$word;?> <?= $replacementString; ?></p>
 </div>
 <div>
-    <img srcset="images/pendu0.gif" alt="X">
+    <img srcset="images/pendu<?= $trial; ?>.gif" alt="X">
+</div>
+<div>
+    <p>
+        Voici les lettres que tu as déja essayé : <?= $triedLetters; ?>
+    </p>
 </div>
 <div>
     <!-- Si on joue insérer le formulaire -->

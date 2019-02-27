@@ -1,7 +1,7 @@
 <form action="index.php" method="post">
     <fieldset>
         <legend>
-            Il te reste <?= MAX_TRIALS; ?> essais pour sauver ta peau
+            Il te reste <?= $remainingTrials; ?> essais pour sauver ta peau
         </legend>
         <label for="triedLetter">Choisis ta lettre</label>
         <select name="triedLetter" id="triedLetter">

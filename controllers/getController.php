@@ -31,5 +31,10 @@ $lettersArray = [
 $wordsArray = getWordsArray();
 $word = getWord(getRandomIndex($wordsArray), $wordsArray);
 
-$wordLength = strlen($word) - 1;
-$hiddenWord = str_repeat('*', $wordLength);
+$lettersCount = strlen($word);
+$replacementString = getReplacementString($word, $lettersCount);
+
+$remainingTrials = MAX_TRIALS;
+$trial = 0;
+
+$triedLetters = '';
